@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OHealth_Vitals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXG Display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEw-Nc-98w">
+                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBC-uy-fdV">
+                                <rect key="frame" x="141" y="477.5" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt6-X9-ZeE">
+                                <rect key="frame" x="30" y="482.5" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.clockwise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-Hd-3eK">
+                                <rect key="frame" x="366" y="437" width="18" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-OK-Nst">
+                                <rect key="frame" x="278" y="482.5" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbn-lc-cvk" userLabel="chartBox" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="30" y="538.5" width="354" height="244.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BEw-Nc-98w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0jL-oP-xub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pbn-lc-cvk" secondAttribute="bottom" constant="30" id="10U-dk-1l4"/>
+                            <constraint firstItem="Pbn-lc-cvk" firstAttribute="top" secondItem="yBC-uy-fdV" secondAttribute="bottom" constant="30" id="37D-XQ-byN"/>
+                            <constraint firstItem="Jt6-X9-ZeE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="45" id="3J4-eU-Rfd"/>
+                            <constraint firstItem="Jt6-X9-ZeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="877-kz-Zyl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lrA-OK-Nst" secondAttribute="trailing" constant="30" id="A55-MG-DHG"/>
+                            <constraint firstItem="BEw-Nc-98w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ByR-Ef-xP5"/>
+                            <constraint firstItem="WGF-Hd-3eK" firstAttribute="leading" secondItem="BEw-Nc-98w" secondAttribute="trailing" constant="112.5" id="JNg-Lu-w3Z"/>
+                            <constraint firstItem="yBC-uy-fdV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="45" id="MXH-HU-R4Z"/>
+                            <constraint firstItem="Pbn-lc-cvk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RGS-7t-Wca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGF-Hd-3eK" secondAttribute="trailing" constant="30" id="S5F-Yd-Exa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pbn-lc-cvk" secondAttribute="trailing" constant="30" id="WiR-5V-gTm"/>
+                            <constraint firstItem="WGF-Hd-3eK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cBH-ts-fRg"/>
+                            <constraint firstItem="yBC-uy-fdV" firstAttribute="leading" secondItem="Jt6-X9-ZeE" secondAttribute="trailing" constant="20" id="hbi-nB-hB0"/>
+                            <constraint firstItem="Pbn-lc-cvk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q94-RB-QT8"/>
+                            <constraint firstItem="lrA-OK-Nst" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="45" id="wea-ul-K7m"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chartBox" destination="Pbn-lc-cvk" id="uur-Vq-cca"/>
+                        <outlet property="connectStatusLbl" destination="lrA-OK-Nst" id="m94-r7-lRT"/>
+                        <outlet property="refreshBtn" destination="WGF-Hd-3eK" id="S0c-fs-CX0"/>
+                        <outlet property="showGraphBtn" destination="yBC-uy-fdV" id="2Oh-rr-jl0"/>
+                        <outlet property="showGraphLbl" destination="Jt6-X9-ZeE" id="XR6-RH-1e2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
