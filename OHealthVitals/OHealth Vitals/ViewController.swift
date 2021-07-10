@@ -338,7 +338,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate, CBPeripheralDel
         
         // Customize graph settings to your liking
         line1.drawCirclesEnabled = false
-        line1.colors = [NSUIColor.blue]
+        line1.colors = [NSUIColor.white]
 
         // Make object that will be added to the chart
         // and set it to the variable in the Storyboard
